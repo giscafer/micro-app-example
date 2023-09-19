@@ -2,6 +2,7 @@
 
 qiankun 微前端 demo，父应用 Umi，子应用使用 `react`, `vue` 。
 
+主应用：https://gis.giscafer.com/
 ## 开始
 
 进入到各子应用目录下执行：
