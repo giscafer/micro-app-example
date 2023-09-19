@@ -1,21 +1,38 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">首页</router-link> |
+      <router-link to="/about">About页</router-link>
     </div>
     <div>
-      <p>当前处于<code>{{ isInQiankun ? 'qiankun' : '独立运行'}}</code>环境</p>
-      <p>vuex的`global module`的user state：<code> {{ JSON.stringify(user) }}</code></p>
+      <p>
+        当前处于<code>{{ isInQiankun ? 'qiankun' : '独立运行' }}</code
+        >环境
+      </p>
+      <p>
+        vuex的`global module`的user state：<code>
+          {{ JSON.stringify(user) }}</code
+        >
+      </p>
+       <a
+          className="App-link"
+          href="https://github.com/giscafer/micro-app-example.git"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+         查看源码
+        </a>
     </div>
     <div class="btns">
       <template v-if="isInQiankun">
-        <button @click="gotoSubReact">从当前子应用内跳转到`sub-react`子应用</button>
+        <button @click="gotoSubReact">
+          从当前子应用内跳转到`sub-react`子应用
+        </button>
         <button @click="openSubVue">独立打开sub-vue子应用</button>
       </template>
       <button @click="changeUsername">改变全局的用户名称</button>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -25,7 +42,7 @@ export default {
   computed: {
     // 通过global获取user的信息
     ...mapState('global', {
-      user: state => state.user
+      user: (state) => state.user
     }),
     isInQiankun () {
       return window.__POWERED_BY_QIANKUN__
@@ -78,11 +95,10 @@ export default {
   color: #42b983;
 }
 
-.btns{
+.btns {
   margin: 100px;
 }
-.btns button{
+.btns button {
   margin: 0 10px;
 }
-
 </style>

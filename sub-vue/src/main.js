@@ -40,12 +40,12 @@ export async function bootstrap () {
   console.log('[vue] vue app bootstraped')
 }
 
-export async function mount (props) {
+export async function mount (props = {}) {
   console.log('[vue] props from main framework', props)
 
   commonStore.globalRegister(store, props)
 
-  render(props)
+  render({ routerBase: '/sub-vue', ...props })
 }
 
 export async function unmount () {
