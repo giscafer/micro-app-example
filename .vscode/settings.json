@@ -1,0 +1,16 @@
+{
+  "eslint.workingDirectories": [
+    "./sub-vue",
+    "./sub-react",
+  ],
+  "eslint.enable": true,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "search.useIgnoreFiles": false,
+  "search.exclude": {
+    "**/dist": true
+  },
+  "eslint.debug": true,
+}
