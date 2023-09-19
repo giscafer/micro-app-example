@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:vercel": "PUBLIC_URL=/ vue-cli-service build",
+    "build:vercel": "PUBLIC_URL=/sub-vue vue-cli-service build",
     "lint": "vue-cli-service lint",
     "start": "npm run serve"
   },
